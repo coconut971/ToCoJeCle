@@ -1,3 +1,4 @@
 Source/main.exe
 Source/main.o
 Save/save.txt
+TLD.txt

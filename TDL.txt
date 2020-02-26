@@ -1,0 +1,10 @@
+fonction à coder :
+
+	- Calcule HP max selon le lvl.
+	- Fonction regen hp si augmenter lvl.
+	- Fonction gagner xp selon la zone.
+	- Fonction prendre une potion.
+	- Mettre dans une fonction, toute la première partie de la boucle principal.
+	- Créer tout les textes + les integrers et que ça soit beau.
+	- Fonction calcule du temps passer depuis la dernière sauvegarde.
+	- Si + de 1min depuis last save, proposer de save avant de quitter.
