@@ -1,2 +1,3 @@
-/Source/main.exe
-/Source/main.o
+Source/main.exe
+Source/main.o
+Save/save.txt
