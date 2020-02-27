@@ -21,5 +21,6 @@ void printMap(int (*map)[20], int x, int y);
 int whereIsPlayer(int *character);
 int atkPlayer(int *character);
 void fight(int *mob,int *character);
+void adventure(int *character, int mob, int *boss);
 
 #endif // MISC_H_INCLUDED

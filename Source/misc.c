@@ -178,6 +178,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         system("cls");
         break;
     case 777: //Texte de Victoire//
+        system("cls");
         color(10,0);
         printf("____    ____  __    ______ .___________.  ______    __  .______       _______ \n");
         printf("\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|\n");
@@ -187,9 +188,10 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         printf("    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|\n");
         printf("F%clicitations, vous avez r%cussi %c vous %cchappez de cette for%ct d%cmoniaque. Vu que nous sommes gentils vous gagnez 10 euros.\n\n",130,130,133,130,136,130);
         color(15,0);
-
+        system("pause");
         break;
     case 888: //Texte de défaite//
+        system("cls");
         color(4,0);
         printf(" _______   _______  _______    ___       __  .___________. _______ \n");
         printf("|       \\ |   ____||   ____|  /   \\     |  | |           ||   ____|\n");
@@ -199,8 +201,10 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         printf("|_______/ |_______||__|   /__/     \\__\\ |__|     |__|     |_______|\n");
         printf("Dommage vous ferez mieux la prochaine fois, il faut plus d'ing%cniosit%c pour triompher de la for%ct noire!\n\n",130,130,136);
         color(15,0);
+        system("pause");
         break;
     case 999://Texte de fermeture du jeux//
+        system("cls");
         color(1,0);
         printf("     ___         .______    __   _______ .__   __. .___________.  ______   .___________.\n");
         printf("    /   \\        |   _  \\  |  | |   ____||  \\ |  | |           | /  __  \\  |           |\n");
@@ -210,8 +214,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         printf("/__/     \\__\\    |______/  |__| |_______||__| \\__|     |__|      \\______/      |__|     \n");
         printf("Nous esp%cront te revoir tr%cs vite pour de nouvelles aventures! \n\n",130,138);
         color(15,0);
-
-
+        system("pause");
         break;
     default:
         color(15,4);
@@ -338,8 +341,10 @@ void setMob(int whatMob, int *mob){
 void endGame(int result, int *character){
     if(result == 1){
         ingameText(777,character);
-    }else{
+    }else if(result == 0){
         ingameText(888,character);
+    }else if(result == 2){
+        ingameText(999,character);
     }
 }
 
@@ -576,5 +581,54 @@ void fight(int *mob,int *character){
             printf("Vous avez gagne le combat !\n");
         }
         system("pause");
+    }
+}
+
+void adventure(int *character, int mob, int *boss){ // Là on va foutre toute les aleatoire d'apparition mob ou objet selon la position sur la map
+    srand(time(NULL));
+    int random = rand()%20+1;
+    int zonePlayer = whereIsPlayer(character);
+
+    if(zonePlayer == 1){    // Set les valeurs du mobs ici dans la boucle pour qu'ils puissent se regenerer à chaque tour de boucle
+        setMob(4,mob);
+    }else if(zonePlayer == 2){
+        setMob(3,mob);
+    }else if(zonePlayer == 3){
+        setMob(2,mob);
+    }
+    if(zonePlayer == 4){
+        if(random > 0 && random < 3){
+            // Tombe sur un mob
+            fight(boss,character);
+            printf("Tu croises un mob, fui bg\n");
+        }else if(random > 5 && random < 9){
+            // Tombe sur une potion
+            printf("Tu croises une potion, gg à toi\n");
+        }else if(random > 8 && random < 12){
+            // Tombe sur une épée
+            printf("Tu croises une epee, gg à toi\n");
+        }else{
+            // Ne se passe rien
+            // Lancer un text bidon comme quoi il se passe R
+            printf("Continue de chercher le boss mdr\n");
+        }
+    }else{
+        if(random > 0 && random < 6){
+            // Tombe sur un mob
+            fight(mob,character);
+        }else if(random > 5 && random < 9){
+            // Tombe sur une potion
+            printf("Tu croises une potion, gg à toi\n");
+            system("pause");
+        }else if(random > 8 && random < 12){
+            // Tombe sur une épée
+            printf("Tu croises une epee, gg à toi\n");
+            system("pause");
+        }else{
+            // Ne se passe rien
+            // Lancer un text bidou comme quoi il se passe R
+            printf("Bah il se passe R mdr\n");
+            system("pause");
+        }
     }
 }

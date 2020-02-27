@@ -33,7 +33,7 @@ void startGame(){
 }
 
 void gameLoop(int *character, int *map, int *boss){
-    int result = 2;     // Var de fin du jeu. Si en sortant de la boucle elle vaut 1, le player à gagné. Sinon si elle vaut 0, le player à perdu.
+    int result = 3;     // Var de fin du jeu. Si en sortant de la boucle elle vaut 1, le player à gagné. Sinon si elle vaut 0, le player à perdu.
     int loop = 1;       // Var de la boucle, on va la set à 0 quand on voudra sortir de la boucle
     int mob[3];         // Liste du mob
     setMob(1,boss);     // Set les valeurs du boss
@@ -114,70 +114,20 @@ void gameLoop(int *character, int *map, int *boss){
             }
         }
 
-
-        //
-        // *
-        // **
-        // Là on va foutre toute les aleatoire d'apparition mob ou objet selon la position sur la map
-        srand(time(NULL));
-        int random = rand()%20+1;
-        int zonePlayer = whereIsPlayer(character);
-
-        if(zonePlayer == 1){    // Set les valeurs du mobs ici dans la boucle pour qu'ils puissent se regenerer à chaque tour de boucle
-            setMob(4,mob);
-        }else if(zonePlayer == 2){
-            setMob(3,mob);
-        }else if(zonePlayer == 3){
-            setMob(2,mob);
-        }
-        if(zonePlayer == 4){
-            if(random > 0 && random < 3){
-                // Tombe sur un mob
-                fight(boss,character);
-                printf("Tu croises un mob, fui bg\n");
-            }else if(random > 5 && random < 9){
-                // Tombe sur une potion
-                printf("Tu croises une potion, gg à toi\n");
-            }else if(random > 8 && random < 12){
-                // Tombe sur une épée
-                printf("Tu croises une epee, gg à toi\n");
-            }else{
-                // Ne se passe rien
-                // Lancer un text bidon comme quoi il se passe R
-                printf("Continue de chercher le boss mdr\n");
-            }
+        if(result != 2){
+            adventure(character,mob,boss);
         }else{
-            if(random > 0 && random < 6){
-                // Tombe sur un mob
-                fight(mob,character);
-            }else if(random > 5 && random < 9){
-                // Tombe sur une potion
-                printf("Tu croises une potion, gg à toi\n");
-                system("pause");
-            }else if(random > 8 && random < 12){
-                // Tombe sur une épée
-                printf("Tu croises une epee, gg à toi\n");
-                system("pause");
-            }else{
-                // Ne se passe rien
-                // Lancer un text bidou comme quoi il se passe R
-                printf("Bah il se passe R mdr\n");
-                system("pause");
-            }
+            result = 2;
         }
-
-        // **
-        // *
-        //
-
 
         // Vérification de sortie de la boucle de jeu
-        if(boss[2]<=0){
+        if(boss[1]<=0){
             loop = 0;
             result = 1;
         }
         if(character[2]<=0){
             loop = 0;
+            result = 0;
         }
     }
     // Vérification de fin du jeu
@@ -185,5 +135,7 @@ void gameLoop(int *character, int *map, int *boss){
         endGame(1, character);
     }else if(result == 0){
         endGame(0, character);
+    }else if(result == 2){
+        endGame(2,character);
     }
 }
