@@ -177,29 +177,41 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         system("pause");
         system("cls");
         break;
-    case 777:   // victoire
-        //
-        // **
-        // Tu me calles tes ascii ici Clément
+    case 777: //Texte de Victoire//
+        color(10,0);
+        printf("____    ____  __    ______ .___________.  ______    __  .______       _______ \n");
+        printf("\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|\n");
+        printf(" \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   \n");
+        printf("  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  \n");
+        printf("   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ \n");
+        printf("    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|\n");
+        printf("F%clicitations, vous avez r%cussi %c vous %cchappez de cette for%ct d%cmoniaque. Vu que nous sommes gentils vous gagnez 10 euros.\n\n",130,130,133,130,136,130);
+        color(15,0);
 
-        // **
-        //
         break;
-    case 888:   // defaite
-        //
-        // **
-        // Tu me calles tes ascii ici Clément
-
-        // **
-        //
+    case 888: //Texte de défaite//
+        color(4,0);
+        printf(" _______   _______  _______    ___       __  .___________. _______ \n");
+        printf("|       \\ |   ____||   ____|  /   \\     |  | |           ||   ____|\n");
+        printf("|  .--.  ||  |__   |  |__    /  ^  \\    |  | `---|  |----`|  |__   \n");
+        printf("|  |  |  ||   __|  |   __|  /  /_\\  \\   |  |     |  |     |   __|  \n");
+        printf("|  '--'  ||  |____ |  |    /  _____  \\  |  |     |  |     |  |____ \n");
+        printf("|_______/ |_______||__|   /__/     \\__\\ |__|     |__|     |_______|\n");
+        printf("Dommage vous ferez mieux la prochaine fois, il faut plus d'ing%cniosit%c pour triompher de la for%ct noire!\n\n",130,130,136);
+        color(15,0);
         break;
-    case 999:   // quitter le jeu
-        //
-        // **
-        // Tu me calles tes ascii ici Clément
+    case 999://Texte de fermeture du jeux//
+        color(1,0);
+        printf("     ___         .______    __   _______ .__   __. .___________.  ______   .___________.\n");
+        printf("    /   \\        |   _  \\  |  | |   ____||  \\ |  | |           | /  __  \\  |           |\n");
+        printf("   /  ^  \\       |  |_)  | |  | |  |__   |   \\|  | `---|  |----`|  |  |  | `---|  |----`\n");
+        printf("  /  /_\\  \\      |   _  <  |  | |   __|  |  . `  |     |  |     |  |  |  |     |  |     \n");
+        printf(" /  _____  \\     |  |_)  | |  | |  |____ |  |\\   |     |  |     |  `--'  |     |  |     \n");
+        printf("/__/     \\__\\    |______/  |__| |_______||__| \\__|     |__|      \\______/      |__|     \n");
+        printf("Nous esp%cront te revoir tr%cs vite pour de nouvelles aventures! \n\n",130,138);
+        color(15,0);
 
-        // **
-        //
+
         break;
     default:
         color(15,4);
