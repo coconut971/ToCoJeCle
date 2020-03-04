@@ -10,6 +10,7 @@ void drake();
 void loadingScreen();
 void title();
 int makeChoice(int numberOfChoice);
+int makeChoiceZQSD();
 void ingameText(int whatText, int *character);
 void characterNextLevel(int *character);
 void setMob(int whatMob, int *mob);

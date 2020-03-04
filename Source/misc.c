@@ -63,6 +63,32 @@ int makeChoice(int numberOfChoice){
     }
 }
 
+int makeChoiceZQSD(){
+    char choice[10] = {0};  // En gros l� je cr�er la chaine de caract�re qui va recup l'input du joueur
+    while(1){
+        printf("\nChoix : ");
+        scanf("%s", &choice);   // Donc l� recup de la reponse du joueur dans une chaine
+        printf("\n");
+        if(tolower(choice[0]) == 'z'){
+            return 1;
+        }else if(tolower(choice[0]) == 's'){
+            return 2;
+        }else if(tolower(choice[0]) == 'q'){
+            return 3;
+        }else if(tolower(choice[0]) == 'd'){
+            return 4;
+        }else if(choice[0] == '1'){
+            return 5;
+        }else if(choice[0] == '2'){
+            return 6;
+        }else{  // Si il ecrit autre chose message d'erreur et nouveau tour de boucle
+            color(4,0);
+            printf("Ce n'est pas un choix disponible.\n");
+            color(15,0);
+        }
+    }
+}
+
 void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est la fonction qui va reunir la plupart des texts du jeu
     switch(whatText){                               // Selon la var whatText, le texte change
     case 1:
@@ -92,7 +118,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         system("pause");
         break;
     case 2: //Menu deplacement
-        printf("QUE VOULEZ VOUS FAIRE :\n1. Nord\n2. Sud\n3. Est\n4. Ouest\n5. Sauvegarder\n6. Quitter le jeu\n\n");
+        printf("QUE VOULEZ VOUS FAIRE :\nZ. Nord\nS. Sud\nQ. Ouest\nD. Est\n1. Sauvegarder\n2. Quitter le jeu\n\n");
         break;
     case 3: // Difficult� selon la zone
         printf("\tZone : ");
@@ -189,39 +215,41 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
     case 777: //Texte de Victoire//
         system("cls");
         color(10,0);
-        printf("____    ____  __    ______ .___________.  ______    __  .______       _______ \n");
-        printf("\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|\n");
-        printf(" \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   \n");
-        printf("  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  \n");
-        printf("   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ \n");
-        printf("    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|\n");
-        printf("F%clicitations, vous avez r%cussi %c vous %cchappez de cette for%ct d%cmoniaque. Vu que nous sommes gentils vous gagnez 10 euros.\n\n",130,130,133,130,136,130);
+        printf("\t\t\t\t\t____    ____  __    ______ .___________.  ______    __  .______       _______ \n");
+        printf("\t\t\t\t\t\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|\n");
+        printf("\t\t\t\t\t \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   \n");
+        printf("\t\t\t\t\t  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  \n");
+        printf("\t\t\t\t\t   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ \n");
+        printf("\t\t\t\t\t    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|\n");
+        printf("\t\t\t\t\t    F%clicitations, vous avez r%cussi %c vous %cchappez de cette for%ct d%cmoniaque.\n",130,130,133,130,136,130);
+        printf("\t\t\t\t\t\t\t    Vu que nous sommes gentils vous gagnez 10 euros.\n");
         color(15,0);
         system("pause");
         break;
     case 888: //Texte de d�faite//
         system("cls");
         color(4,0);
-        printf(" _______   _______  _______    ___       __  .___________. _______ \n");
-        printf("|       \\ |   ____||   ____|  /   \\     |  | |           ||   ____|\n");
-        printf("|  .--.  ||  |__   |  |__    /  ^  \\    |  | `---|  |----`|  |__   \n");
-        printf("|  |  |  ||   __|  |   __|  /  /_\\  \\   |  |     |  |     |   __|  \n");
-        printf("|  '--'  ||  |____ |  |    /  _____  \\  |  |     |  |     |  |____ \n");
-        printf("|_______/ |_______||__|   /__/     \\__\\ |__|     |__|     |_______|\n");
-        printf("Dommage vous ferez mieux la prochaine fois, il faut plus d'ing%cniosit%c pour triompher de la for%ct noire!\n\n",130,130,136);
+        printf("\t\t\t\t\t _______   _______  _______    ___       __  .___________. _______ \n");
+        printf("\t\t\t\t\t|       \\ |   ____||   ____|  /   \\     |  | |           ||   ____|\n");
+        printf("\t\t\t\t\t|  .--.  ||  |__   |  |__    /  ^  \\    |  | `---|  |----`|  |__   \n");
+        printf("\t\t\t\t\t|  |  |  ||   __|  |   __|  /  /_\\  \\   |  |     |  |     |   __|  \n");
+        printf("\t\t\t\t\t|  '--'  ||  |____ |  |    /  _____  \\  |  |     |  |     |  |____ \n");
+        printf("\t\t\t\t\t|_______/ |_______||__|   /__/     \\__\\ |__|     |__|     |_______|\n");
+        printf("\t\t\t\t\tDommage   vous   ferez  mieux   la   prochaine   fois, il faut plus\n");
+        printf("\t\t\t\t\td'ing%cniosit%c     pour     triompher     de    la for%ct    noire  ! \n",130,130,136);
         color(15,0);
         system("pause");
         break;
     case 999://Texte de fermeture du jeux//
         system("cls");
         color(1,0);
-        printf("     ___         .______    __   _______ .__   __. .___________.  ______   .___________.\n");
-        printf("    /   \\        |   _  \\  |  | |   ____||  \\ |  | |           | /  __  \\  |           |\n");
-        printf("   /  ^  \\       |  |_)  | |  | |  |__   |   \\|  | `---|  |----`|  |  |  | `---|  |----`\n");
-        printf("  /  /_\\  \\      |   _  <  |  | |   __|  |  . `  |     |  |     |  |  |  |     |  |     \n");
-        printf(" /  _____  \\     |  |_)  | |  | |  |____ |  |\\   |     |  |     |  `--'  |     |  |     \n");
-        printf("/__/     \\__\\    |______/  |__| |_______||__| \\__|     |__|      \\______/      |__|     \n");
-        printf("Nous esp%cront te revoir tr%cs vite pour de nouvelles aventures! \n\n",130,138);
+        printf("\t\t\t\t\t     ___         .______    __   _______ .__   __. .___________.  ______   .___________.\n");
+        printf("\t\t\t\t\t    /   \\        |   _  \\  |  | |   ____||  \\ |  | |           | /  __  \\  |           |\n");
+        printf("\t\t\t\t\t   /  ^  \\       |  |_)  | |  | |  |__   |   \\|  | `---|  |----`|  |  |  | `---|  |----`\n");
+        printf("\t\t\t\t\t  /  /_\\  \\      |   _  <  |  | |   __|  |  . `  |     |  |     |  |  |  |     |  |     \n");
+        printf("\t\t\t\t\t /  _____  \\     |  |_)  | |  | |  |____ |  |\\   |     |  |     |  `--'  |     |  |     \n");
+        printf("\t\t\t\t\t/__/     \\__\\    |______/  |__| |_______||__| \\__|     |__|      \\______/      |__|     \n");
+        printf("\t\t\t\t\t\t\tNous esp%cront te revoir tr%cs vite pour de nouvelles aventures! \n",130,138);
         color(15,0);
         system("pause");
         break;
