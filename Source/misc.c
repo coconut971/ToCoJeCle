@@ -2,6 +2,11 @@
 // Created by h3ll0w0rld (Tom) on 21/02/2020.
 //
 
+#include "misc.h"
+#include "game.h"
+#include "game-init.h"
+#include <windows.h>
+
 void color(int couleurDuTexte, int couleurDeFond){   // La fonction qui va nous servir � colorer notre texte
     HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);           // Ne pas oublier de rappeler la fonction avec une couleur normal apres utilisation
     SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);

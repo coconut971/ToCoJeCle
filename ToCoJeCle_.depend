@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1582725347 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle_\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"game.h"
+	"game-init.h"
+	"misc.h"
+
+1583327463 c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle_\game.h
+
+1583327463 c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle_\game-init.h
+
+1583327461 c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle_\misc.h
+
+1583327558 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle_\game.c
+	"misc.h"
+	"game.h"
+	"game-init.h"
+
+1583327578 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle_\game-init.c
+	"misc.h"
+	"game.h"
+	"game-init.h"
+
+1583327620 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle_\misc.c
+	"misc.h"
+	"game.h"
+	"game-init.h"
+	<windows.h>
+

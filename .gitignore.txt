@@ -1,4 +1,4 @@
-Source/main.exe
-Source/main.o
-Save/save.txt
+bin/
+obj/
+save.txt
 TLD.txt

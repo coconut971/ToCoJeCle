@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ToCoJeCle_" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ToCoJeCle_" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ToCoJeCle_" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Source/game-init.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Source/game-init.h" />
+		<Unit filename="Source/game.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Source/game.h" />
+		<Unit filename="Source/main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Source/misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Source/misc.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -5,8 +5,6 @@
 #ifndef GAME_H_INCLUDED
 #define GAME_H_INCLUDED
 
-#include "game.c"
-
 void startGame();
 void gameLoop(int *character, int *map, int *boss);
 

@@ -2,6 +2,10 @@
 // Created by h3ll0w0rld (Tom) on 21/02/2020.
 //
 
+#include "misc.h"
+#include "game.h"
+#include "game-init.h"
+
 void startGame(){
     int character[10];  // Liste personnage
     int boss[3];       // Liste boss
@@ -20,7 +24,7 @@ void startGame(){
             ingameText(1,character);
             gameLoop(character, map, boss);
         }else if(choice == 2){  // Option charger la dernière sauvegarde
-            loadGame(character, boss);
+            // loadGame(character, boss);
             ingameText(4,character);
             gameLoop(character, map, boss);
         }else if(choice == 3){  // Option a propos
@@ -100,7 +104,7 @@ void gameLoop(int *character, int *map, int *boss){
                     }
                     break;
                 case 5:
-                    saveGame(character,boss);
+                    // saveGame(character,boss);
                     break;
                 case 6:
                     loop = 0;

@@ -5,8 +5,6 @@
 #ifndef MISC_H_INCLUDED
 #define MISC_H_INCLUDED
 
-#include "misc.c"
-
 void color(int couleurDuTexte, int couleurDeFond);
 void drake();
 void loadingScreen();

@@ -5,8 +5,6 @@
 #ifndef GAME-INIT_H_INCLUDED
 #define GAME-INIT_H_INCLUDED
 
-#include "game-init.c"
-
 void fullScreen();
 void startMenu();
 void createCharacter(int *personnage);
