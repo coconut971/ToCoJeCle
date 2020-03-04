@@ -8,3 +8,5 @@ fonction à coder :
 	- Créer tout les textes + les integrers et que ça soit beau.
 	- Fonction calcule du temps passer depuis la dernière sauvegarde.
 	- Si + de 1min depuis last save, proposer de save avant de quitter.
+	- Remplacer les listes des entiter par des structs
+	- Fix sauvegarde

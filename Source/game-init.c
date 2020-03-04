@@ -30,8 +30,8 @@ void createCharacter(int *character){
     character[2] = 50;         // Point de Vie
     character[3] = 1;          // Niveau de l'epee
     character[4] = 0;          // Nombre de mob vaincu (A incr�menter a chaque victoire)
-    character[5] = 1;          // x
-    character[6] = 18;         // y
+    character[5] = 5;          // x
+    character[6] = 14;         // y
     character[7] = 0;          // Progression dans l'histoire (pour les indices sous la map)
     character[8] = 0;          // Map du jeu
     character[9] = 5;          // Point d'hp de la potion

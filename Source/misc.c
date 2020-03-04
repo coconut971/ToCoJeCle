@@ -2,7 +2,7 @@
 // Created by h3ll0w0rld (Tom) on 21/02/2020.
 //
 
-void color(int couleurDuTexte, int couleurDeFond){   // La fonction qui va nous servir à colorer notre texte
+void color(int couleurDuTexte, int couleurDeFond){   // La fonction qui va nous servir ï¿½ colorer notre texte
     HANDLE H=GetStdHandle(STD_OUTPUT_HANDLE);           // Ne pas oublier de rappeler la fonction avec une couleur normal apres utilisation
     SetConsoleTextAttribute(H,couleurDeFond*16+couleurDuTexte);
 }
@@ -13,7 +13,7 @@ void drake(){   // Comme son nom l'indique c'est l'ascii du dragon
     color(15,0);
 }
 
-void loadingScreen(){   // Comme son nom l'indique c'est un loading screen (purement estetique, ça sert à tchipet)
+void loadingScreen(){   // Comme son nom l'indique c'est un loading screen (purement estetique, ï¿½a sert ï¿½ tchipet)
     int timeSleep = 200;
     system("cls");
     color(6,0);
@@ -37,11 +37,11 @@ void title(){   // Comme son nom l'indique c'est le titre
 }
 
 int makeChoice(int numberOfChoice){
-    char choice[10] = {0};  // En gros là je créer la chaine de caractère qui va recup l'input du joueur
-    int integerChoice = 0;  // Là je vais recup la tranformation du char en int
+    char choice[10] = {0};  // En gros lï¿½ je crï¿½er la chaine de caractï¿½re qui va recup l'input du joueur
+    int integerChoice = 0;  // Lï¿½ je vais recup la tranformation du char en int
     while(1){
         printf("\nChoix : ");
-        scanf("%s", &choice);   // Donc là recup de la reponse du joueur dans une chaine
+        scanf("%s", &choice);   // Donc lï¿½ recup de la reponse du joueur dans une chaine
         printf("\n");
         integerChoice = atoi(choice);   // Transformation de la chaine en int
         if(integerChoice > 0 && integerChoice < numberOfChoice+1){  // Si on est dans la bonne range on retourne le choix du joueur
@@ -85,7 +85,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
     case 2: //Menu deplacement
         printf("QUE VOULEZ VOUS FAIRE :\n1. Nord\n2. Sud\n3. Est\n4. Ouest\n5. Sauvegarder\n6. Quitter le jeu\n\n");
         break;
-    case 3: // Difficulté selon la zone
+    case 3: // Difficultï¿½ selon la zone
         printf("\tZone : ");
         color(4,0);
         printf("\tRouge : ");
@@ -138,7 +138,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         printf("Pour ce devoir, nous sommes actuellement en %cquipe de 4.\n\n\n",130);
 
         color(6,0);
-        printf("Franck");
+        printf("Franck ");
         color(15,0);
         printf("alias ");
         color(6,0);
@@ -190,7 +190,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         color(15,0);
         system("pause");
         break;
-    case 888: //Texte de défaite//
+    case 888: //Texte de dï¿½faite//
         system("cls");
         color(4,0);
         printf(" _______   _______  _______    ___       __  .___________. _______ \n");
@@ -405,7 +405,7 @@ void printMap(int (*map)[20], int x, int y){
                 color(0,9);
                 printf("%c",map[i][j]);
                 color(15,0);
-            }else if(j > 0 && j < 10 && i > 9 && i < 19){   // Zone  Verte | Débutant
+            }else if(j > 0 && j < 10 && i > 9 && i < 19){   // Zone  Verte | Dï¿½butant
                 color(0,2);
                 printf("%c",map[i][j]);
                 color(15,0);
@@ -432,7 +432,7 @@ int whereIsPlayer(int *character){
         return 3;
     }else if(j > 9 && j < 19 && i > 9 && i < 19){   // Zone Bleu | Intermediaire
         return 2;
-    }else if(j > 0 && j < 10 && i > 9 && i < 19){   // Zone  Verte | Débutant
+    }else if(j > 0 && j < 10 && i > 9 && i < 19){   // Zone  Verte | Dï¿½butant
         return 1;
     }
     return 5;
@@ -584,12 +584,12 @@ void fight(int *mob,int *character){
     }
 }
 
-void adventure(int *character, int mob, int *boss){ // Là on va foutre toute les aleatoire d'apparition mob ou objet selon la position sur la map
+void adventure(int *character, int mob, int *boss){ // Lï¿½ on va foutre toute les aleatoire d'apparition mob ou objet selon la position sur la map
     srand(time(NULL));
     int random = rand()%20+1;
     int zonePlayer = whereIsPlayer(character);
 
-    if(zonePlayer == 1){    // Set les valeurs du mobs ici dans la boucle pour qu'ils puissent se regenerer à chaque tour de boucle
+    if(zonePlayer == 1){    // Set les valeurs du mobs ici dans la boucle pour qu'ils puissent se regenerer ï¿½ chaque tour de boucle
         setMob(4,mob);
     }else if(zonePlayer == 2){
         setMob(3,mob);
@@ -603,10 +603,10 @@ void adventure(int *character, int mob, int *boss){ // Là on va foutre toute les
             printf("Tu croises un mob, fui bg\n");
         }else if(random > 5 && random < 9){
             // Tombe sur une potion
-            printf("Tu croises une potion, gg à toi\n");
+            printf("Tu croises une potion, gg ï¿½ toi\n");
         }else if(random > 8 && random < 12){
-            // Tombe sur une épée
-            printf("Tu croises une epee, gg à toi\n");
+            // Tombe sur une ï¿½pï¿½e
+            printf("Tu croises une epee, gg ï¿½ toi\n");
         }else{
             // Ne se passe rien
             // Lancer un text bidon comme quoi il se passe R
@@ -618,11 +618,11 @@ void adventure(int *character, int mob, int *boss){ // Là on va foutre toute les
             fight(mob,character);
         }else if(random > 5 && random < 9){
             // Tombe sur une potion
-            printf("Tu croises une potion, gg à toi\n");
+            printf("Tu croises une potion, gg ï¿½ toi\n");
             system("pause");
         }else if(random > 8 && random < 12){
-            // Tombe sur une épée
-            printf("Tu croises une epee, gg à toi\n");
+            // Tombe sur une ï¿½pï¿½e
+            printf("Tu croises une epee, gg ï¿½ toi\n");
             system("pause");
         }else{
             // Ne se passe rien
