@@ -29,3 +29,27 @@
 	"game-init.h"
 	<windows.h>
 
+1583328196 source:c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game-init.c
+	"misc.h"
+	"game.h"
+	"game-init.h"
+
+1583328196 c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\misc.h
+
+1583328196 c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game.h
+
+1583328196 c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game-init.h
+
+1583328196 source:c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game.c
+	"misc.h"
+	"game.h"
+	"game-init.h"
+
+1582795735 source:c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"game.h"
+	"game-init.h"
+	"misc.h"
+

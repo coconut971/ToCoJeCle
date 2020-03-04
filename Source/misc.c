@@ -81,6 +81,10 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         printf(".\n");
         color(6,0);
         printf("\n\nVous vous r%cveillez dans une for%ct sombre et trouvez %c vos pieds une feuille avec des %ccritures dessus.\n\n**\nVous avez %ct%c s%cl%cctionn%c pour participer %c notre jeu de la mort.\nLe but est le suivant : Vous %cchapez de la for%ct.\nPour cela, une seule solution.\nVaincre le boss de la for%ct.\nComme nous sommes de gentil personnes, vous trouverez la carte de la for%ct au dos de cette feuille.\n(PS : Afin d'%cviter toute fuite de votre par, un champ de force entoure la for%ct, il ne se d%csactivera seulement que losque le boss sera mort.)\n",130,136,133,130,130,130,130,130,130,133,130,136,136,136,130,136,130);
+        printf("Lors de votre aventure vous pourrez trouver des %cp%ces ou des potions pour rendre votre p%criple un peu plus simple. Lorsque vous trouvez une %cp%ce celle-ci se \n",130,130,130,130,130);
+        printf("fusionne automatiquement %c celle que vous avez d%cj%c pour faire une %cp%ce de niveaux 2. Il vous faudra ensuite retrouver 1 %cp%ce de niveaux 2 pour fusionner vos 2 %cp%ce en\n",133,130,133,130,130,130,130,130,130);
+        printf("une %cp%ce de niveaux 3 et ainsi de suite. Pour ce qui est des potions, vous disposez d'une fiole de quantit%c illimit%c que vous remplissez au fur et %c mesure que\n",130,130,130,130,133);
+        printf("vous r%ccup%crer des potions.\n",130,130);
         color(6,0);
         printf("**\n\n");
         color(15,0);
@@ -608,32 +612,66 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             printf("Tu croises un mob, fui bg\n");
         }else if(random > 5 && random < 9){
             // Tombe sur une potion
-            printf("Tu croises une potion, gg � toi\n");
+            printf("Tu croises une potion, gg %c toi\n",133);
         }else if(random > 8 && random < 12){
             // Tombe sur une �p�e
-            printf("Tu croises une epee, gg � toi\n");
+            printf("Tu croises une epee, gg %c toi\n",133);
         }else{
-            // Ne se passe rien
-            // Lancer un text bidon comme quoi il se passe R
-            printf("Continue de chercher le boss mdr\n");
-        }
+            random = rand()%3+1;
+            if (random==1){
+                printf("Il commence %c pleuvoir vous allez vous abriter sous un arbre.\n",133);
+                system("pause");
+            }
+            else if (random==2) {
+                printf("Vous marchez dans la for%ct, il fait beau, le soleil tape.\n",136);
+                system("pause");
+
+            }
+            else if (random==3){
+                printf("Continue de chercher le boss mdr\n");
+            }
+
+            }
+
+
     }else{
         if(random > 0 && random < 6){
             // Tombe sur un mob
             fight(mob,character);
         }else if(random > 5 && random < 9){
             // Tombe sur une potion
-            printf("Tu croises une potion, gg � toi\n");
+            printf("Tu croises une potion, gg %c toi\n",133);
             system("pause");
         }else if(random > 8 && random < 12){
             // Tombe sur une �p�e
-            printf("Tu croises une epee, gg � toi\n");
-            system("pause");
-        }else{
-            // Ne se passe rien
-            // Lancer un text bidou comme quoi il se passe R
-            printf("Bah il se passe R mdr\n");
+            printf("Tu croises une epee, gg %c toi\n",133);
             system("pause");
         }
+        else{//Différznts choix
+            random = rand()%5+1;
+            if (random==1){
+                printf("Vous voyez au loin une maison, il semble qu\'elle soit faite enti%crement de bonbon, bizarre !\n",138);
+                system("pause");
+            }
+            else if (random==2){
+                printf("Il ne se passe rien, seulement une licorne en train de boire dans l\'%ctang %c cot%c de vous.\n",130,133,130);
+                system("pause");
+            }
+            else if (random==3){
+                printf("Il commence %c pleuvoir vous allez vous abriter sous un arbre.\n",133);
+                system("pause");
+            }
+            else if (random==4){
+                printf("Vous voyez les herbes bouger devant vous, vous vous approchez... Ouf ce n\'%ctait qu\'un lapin !\n",130);
+                system("pause");
+            }
+            else if (random==5){
+                printf("Vous marchez dans la for%ct, il fait beau, le soleil tape.\n\n",136);
+                system("pause");
+            }
+        }
+
+
+
     }
 }
