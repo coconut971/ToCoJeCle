@@ -14,8 +14,82 @@ void color(int couleurDuTexte, int couleurDeFond){   // La fonction qui va nous 
 
 void drake(){   // Comme son nom l'indique c'est l'ascii du dragon
     color(4,0);
-    printf("\n\t\t\t                 -==\\\\                         `//~\\\\   ~~~~`---.___.-~~\n\t\t\t             ______-==|                         | |  \\\\           _-~`\n\t\t\t       __--~~~  ,-/-==\\\\                        | |   `\\        ,'\n\t\t\t    _-~       /'    |  \\\\                      / /      \\      /\n\t\t\t  .'        /       |   \\\\                   /' /        \\   /'\n\t\t\t /  ____  /         |    \\`\\.__/-~~ ~ \ _ _/'  /          \\/'\n\t\t\t/-'~    ~~~~~---__  |     ~-/~         ( )   /'        _--~`\n\t\t\t                  \\_|      /        _)   ;  ),   __--~~\n\t\t\t                    '~~--_/      _-~/-  / \\   '-~ \\\n\t\t\t                   {\\__--_/}    / \\_>- )<__\\      \\\n\t\t\t                   /'   (_/  _-~  | |__>--<__|      |\n\t\t\t                  |0  0 _/) )-~     | |__>--<__|     |\n\t\t\t                  / /~ ,_/       / /__>---<__/      |\n\t\t\t                 o o _//        /-~_>---<__-~      /\n\t\t\t                 (^(~          /~_>---<__-      _-~\n\t\t\t                ,/|           /__>--<__/     _-~\n\t\t\t             ,//('(          |__>--<__|     /                  .----_\n\t\t\t            ( ( '))          |__>--<__|    |                 /' _---_~\\\n\t\t\t         `-)) )) (           |__>--<__|    |               /'  /     ~\\`\\\n\t\t\t        ,/,'//( (             \\__>--<__\\    \\            /'  //        ||\n\t\t\t      ,( ( ((, ))              ~-__>--<_~-_  ~--____---~' _/'/        /'\n\t\t\t    `~/  )` ) ,/|                 ~-_~>--<_/-__       __-~ _/\n\t\t\t  ._-~//( )/ )) `                    ~~-'_/_/ /~~~~~~~__--~\n\t\t\t   ;'( ')/ ,)(                              ~~~~~~~~~~\n\t\t\t  ' ') '( (/\n\t\t\t    '   '  `\n\n");
+    printf("\t\t\t\t\t                 -==\\\\\\\\                         `//~\\\\\\\\   ~~~~`---.___.-~~\n");
+    printf("\t\t\t\t\t            ______-==|                         | |  \\\\\\\\           _-~`\n");
+    printf("\t\t\t\t\t       __--~~~  ,-/-==\\\\\\\\                        | |   `\\\\        ,'\n");
+    printf("\t\t\t\t\t    _-~       /'    |  \\\\\\\\                      / /      \\\\      /\n");
+    printf("\t\t\t\t\t  .'        /       |   \\\\\\\\                   /' /        \\\\   /'\n");
+    printf("\t\t\t\t\t /  ____  /         |    \\\\`\\\\.__/-~~ ~ \\ _ _/'  /          \\\\/'\n");
+    printf("\t\t\t\t\t/-'~    ~~~~~---__  |     ~-/~         ( )   /'        _--~`\n");
+    printf("\t\t\t\t\t                 \\\\_|      /        _)   ;  ),   __--~~\n");
+    printf("\t\t\t\t\t                   '~~--_/      _-~/-  / \\\\   '-~ \\\\\n");
+    printf("\t\t\t\t\t                  {\\\\__--_/}    / \\\\_>- )<__\\\\      \\\\\n");
+    printf("\t\t\t\t\t                  /'   (_/  _-~  | |__>--<__|      |\n");
+    printf("\t\t\t\t\t                  |0  0 _/) )-~     | |__>--<__|     |\n");
+    printf("\t\t\t\t\t                 / /~ ,_/       / /__>---<__/      |\n");
+    printf("\t\t\t\t\t                o o _//        /-~_>---<__-~      /\n");
+    printf("\t\t\t\t\t                (^(~          /~_>---<__-      _-~\n");
+    printf("\t\t\t\t\t               ,/|           /__>--<__/     _-~\n");
+    printf("\t\t\t\t\t            ,//('(          |__>--<__|     /                  .----_\n");
+    printf("\t\t\t\t\t            ( ( '))          |__>--<__|    |                 /' _---_~\\\\\n");
+    printf("\t\t\t\t\t        `-)) )) (           |__>--<__|    |               /'  /     ~\\\\`\\\\\n");
+    printf("\t\t\t\t\t       ,/,'//( (             \\\\__>--<__\\\\    \\\\            /'  //        ||\n");
+    printf("\t\t\t\t\t     ,( ( ((, ))              ~-__>--<_~-_  ~--____---~' _/'/        /'\n");
+    printf("\t\t\t\t\t    `~/  )` ) ,/|                 ~-_~>--<_/-__       __-~ _/\n");
+    printf("\t\t\t\t\t  ._-~//( )/ )) `                    ~~-'_/_/ /~~~~~~~__--~\n");
+    printf("\t\t\t\t\t   ;'( ')/ ,)(                              ~~~~~~~~~~\n");
+    printf("\t\t\t\t\t  ' ') '( (/\n");
+    printf("\t\t\t\t\t    '   '  `\n");
+    printf("\t\t\t\t\t\n");
+    printf("\t\t\t\t\t\n");
     color(15,0);
+}
+void dragoeuf(){ //ascii du dragoeuf
+    color(4,0);
+    printf("\t\t\t\t\t         __        _\n");
+    printf("\t\t\t\t\t       _/  \\    _(\\(o\n");
+    printf("\t\t\t\t\t      /     \\  /  _  ^^^o\n");
+    printf("\t\t\t\t\t     /   !   \\/  ! '!!!v'\n");
+    printf("\t\t\t\t\t    !  !  \\ _' ( \\____\n");
+    printf("\t\t\t\t\t    ! . \\ _!\\   \\===^\\)\n");
+    printf("\t\t\t\t\t     \\ \\_!  / __!\n");
+    printf("\t\t\t\t\t      \\!   /    \\\n");
+    printf("\t\t\t\t\t(\\_      _/   _\\ )\n");
+    printf("\t\t\t\t\t \\ ^^--^^ __-^ /(__\n");
+    printf("\t\t\t\t\t  ^^----^^    \"^--v'\n\n");
+    color(15,0);
+}
+void dragouille(){ //Ascii du dragouille
+    color(4,0);
+    printf("\t\t\t\t\tO=- .-  -. -=O\n");
+    printf("\t\t\t\t\tH  /(    )\\  H\n");
+    printf("\t\t\t\t\t| |  -^^-  | |\n");
+    printf("\t\t\t\t\t   \\_ `' _/\n");
+    printf("\t\t\t\t\t|    \\  )    |\n");
+    printf("\t\t\t\t\tH     )/     H\n");
+    printf("\t\t\t\t\tO=-  ('    -=O\n\n");
+    color(15,0);
+}
+void dragouno(){//Ascii du dragouno
+    color(4,0);
+    printf("\t\t\t\t\t     (\\               /)\n");
+    printf("\t\t\t\t\t    __)\\             /(__\n");
+    printf("\t\t\t\t\t   __)_ \\  (\\!~!/)  / _(__\n");
+    printf("\t\t\t\t\t  __)_ `.\\  )d b(  /.' _(__\n");
+    printf("\t\t\t\t\t___)_ `. \\\\(  _  )// .' _(___\n");
+    printf("\t\t\t\t\t )_  `. \\  ((q_p))  / .'  _(_\n");
+    printf("\t\t\t\t\t _)`.  \\  ,-)\\_/(-.  /  .'(_\n");
+    printf("\t\t\t\t\t  _) ,-._/v/vvvvv\\v\\_,-. (_\n");
+    printf("\t\t\t\t\t  _)///(._/v(___)v\\_.)\\\\\\(_\n");
+    printf("\t\t\t\t\t   \\_ ___/v(_____)v\\___ _/\n");
+    printf("\t\t\t\t\t     /vvv\\(_______)/vvv\\\n");
+    printf("\t\t\t\t\t     \\vvv/v(_____)v\\vvv/\n");
+    printf("\t\t\t\t\t     _\\vv\\\\v(___)v//vv/_\n");
+    printf("\t\t\t\t\t    '>_`  \\`-._.-'/  '_<`\n");
+    printf("\t\t\t\t\t    ' >_,-'       `-._<`\n\n");
+    color(15,0);
+
+
 }
 
 void loadingScreen(){   // Comme son nom l'indique c'est un loading screen (purement estetique, �a sert � tchipet)
