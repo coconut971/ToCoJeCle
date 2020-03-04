@@ -12,7 +12,7 @@ void startGame(){
     int map[20][20];
     createMap(map);
     fullScreen();
-    // loadingScreen();
+    //loadingScreen();
     int i;
     do{
         i= 0;
@@ -53,7 +53,8 @@ void gameLoop(int *character, int *map, int *boss){
             ingameText(2,character);
             // On affiche un menu de choix et on recupere l'input player pour effectuer son choix.
             int colide;
-            int choice = makeChoice(6);
+            // int choice = makeChoice(6);
+            int choice = makeChoiceZQSD();
             switch(choice){
                 case 1:
                     colide = moove(1,character);

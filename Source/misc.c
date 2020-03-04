@@ -63,6 +63,32 @@ int makeChoice(int numberOfChoice){
     }
 }
 
+int makeChoiceZQSD(){
+    char choice[10] = {0};  // En gros l� je cr�er la chaine de caract�re qui va recup l'input du joueur
+    while(1){
+        printf("\nChoix : ");
+        scanf("%s", &choice);   // Donc l� recup de la reponse du joueur dans une chaine
+        printf("\n");
+        if(tolower(choice[0]) == 'z'){
+            return 1;
+        }else if(tolower(choice[0]) == 's'){
+            return 2;
+        }else if(tolower(choice[0]) == 'q'){
+            return 3;
+        }else if(tolower(choice[0]) == 'd'){
+            return 4;
+        }else if(choice[0] == '1'){
+            return 5;
+        }else if(choice[0] == '2'){
+            return 6;
+        }else{  // Si il ecrit autre chose message d'erreur et nouveau tour de boucle
+            color(4,0);
+            printf("Ce n'est pas un choix disponible.\n");
+            color(15,0);
+        }
+    }
+}
+
 void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est la fonction qui va reunir la plupart des texts du jeu
     switch(whatText){                               // Selon la var whatText, le texte change
     case 1:
@@ -88,7 +114,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         system("pause");
         break;
     case 2: //Menu deplacement
-        printf("QUE VOULEZ VOUS FAIRE :\n1. Nord\n2. Sud\n3. Est\n4. Ouest\n5. Sauvegarder\n6. Quitter le jeu\n\n");
+        printf("QUE VOULEZ VOUS FAIRE :\nZ. Nord\nS. Sud\nQ. Ouest\nD. Est\n1. Sauvegarder\n2. Quitter le jeu\n\n");
         break;
     case 3: // Difficult� selon la zone
         printf("\tZone : ");
