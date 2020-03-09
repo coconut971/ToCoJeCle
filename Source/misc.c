@@ -317,13 +317,14 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
     case 999://Texte de fermeture du jeux//
         system("cls");
         color(1,0);
-        printf("\t\t\t\t\t     ___         .______    __   _______ .__   __. .___________.  ______   .___________.\n");
-        printf("\t\t\t\t\t    /   \\        |   _  \\  |  | |   ____||  \\ |  | |           | /  __  \\  |           |\n");
-        printf("\t\t\t\t\t   /  ^  \\       |  |_)  | |  | |  |__   |   \\|  | `---|  |----`|  |  |  | `---|  |----`\n");
-        printf("\t\t\t\t\t  /  /_\\  \\      |   _  <  |  | |   __|  |  . `  |     |  |     |  |  |  |     |  |     \n");
-        printf("\t\t\t\t\t /  _____  \\     |  |_)  | |  | |  |____ |  |\\   |     |  |     |  `--'  |     |  |     \n");
-        printf("\t\t\t\t\t/__/     \\__\\    |______/  |__| |_______||__| \\__|     |__|      \\______/      |__|     \n");
-        printf("\t\t\t\t\t\t\tNous esp%cront te revoir tr%cs vite pour de nouvelles aventures! \n",130,138);
+        printf("\t\t\t     ___         .______    __   _______ .__   __. .___________.  ______   .___________.\n");
+        printf("\t\t\t    /   \\        |   _  \\  |  | |   ____||  \\ |  | |           | /  __  \\  |           |\n");
+        printf("\t\t\t   /  ^  \\       |  |_)  | |  | |  |__   |   \\|  | `---|  |----`|  |  |  | `---|  |----`\n");
+        printf("\t\t\t  /  /_\\  \\      |   _  <  |  | |   __|  |  . `  |     |  |     |  |  |  |     |  |     \n");
+        printf("\t\t\t /  _____  \\     |  |_)  | |  | |  |____ |  |\\   |     |  |     |  `--'  |     |  |     \n");
+        printf("\t\t\t/__/     \\__\\    |______/  |__| |_______||__| \\__|     |__|      \\______/      |__|     \n");
+        printf("\t                                                             \n");
+        printf("\t\t\t\tNous esp%cront te revoir tr%cs vite pour de nouvelles aventures! \n",130,138);
         color(15,0);
         system("pause");
         break;
