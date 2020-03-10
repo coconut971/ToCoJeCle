@@ -25,17 +25,17 @@ Les Tâches
     * analyse en permanence le developpement du jeu
     * aide toute l'équipe a la réalisation du jeu
 
-2. TOM AÏT-OUARAB / Developpeur principal (back-end & Full Stack)
+2. TOM AÏT-OUARAB / Senior lead developper
     * Code une très grande partie du jeu 
     * Réfléchit sur le developpement du Lore
     * aide toute l'équipe a la réalisation du jeu avec son intelligence
     * Fait en sorte que les codes des dev au dessus puisse fonctionner ensemble
 
-3. Clément DUFOUR-LAMARTINIE / Developpeur Front-end
+3. Clément DUFOUR-LAMARTINIE / Junior developper
     * Mettre en forme les fonctionnalités pour l'affichage
     * Mise en place du Lore Ingame
 
-4. Jeremy GRIFFITH / developpeur Back-end
+4. Jeremy GRIFFITH / Junior developper
     * se charge de la mise en place de la configuration et du développement
 
 
@@ -54,16 +54,3 @@ Pour le changeLog il n'est pas encore disponible
 
 
 
-
-
-
-
-
-
-
-
-
-
-# ToCoJeCle
-26/02/2020 : Initial commit.
-14/01/2020 : Fist commit.
