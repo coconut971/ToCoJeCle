@@ -280,7 +280,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         color(6,0);
         printf("Useless-Boy ");
         color(15,0);
-        printf(" => Il sert %c tchipet, %ca fait un mois qu'il doit m'envoyer un truc que je lui ai demand%c.\n\n",133,135,130);
+        printf(" => Il s'est occup%c de tout les textes, de l'ASCII, de la musique et de deux trois d%cbuggage.\n\n",130,130);
 
         printf("\n\n\n\n");
         system("pause");
@@ -594,6 +594,16 @@ void fight(int *mob,int *character){
             printf("%s ",mob[0]);
             color(15,0);
             printf("sauvage apparait !\n\n");
+            if(mob[0] == "Crocabulia"){
+                void drake();
+            }else if(mob[0] == "dragoeuf"){
+                void dragoeuf();
+            }else if(mob[0] == "dragnil"){
+                void dragnil();
+            }else if(mob[0] == "dragoune"){
+                void dragoune();
+
+            }
             j++;
         }
         color(4,0);
