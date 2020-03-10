@@ -7,7 +7,7 @@
 #include "game-init.h"
 
 void startGame(){
-    int character[10];  // Liste personnage
+    int character[11];  // Liste personnage
     int boss[3];       // Liste boss
     int map[20][20];
     createMap(map);

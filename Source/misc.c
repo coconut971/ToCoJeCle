@@ -317,13 +317,14 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
     case 999://Texte de fermeture du jeux//
         system("cls");
         color(1,0);
-        printf("\t\t\t\t\t     ___         .______    __   _______ .__   __. .___________.  ______   .___________.\n");
-        printf("\t\t\t\t\t    /   \\        |   _  \\  |  | |   ____||  \\ |  | |           | /  __  \\  |           |\n");
-        printf("\t\t\t\t\t   /  ^  \\       |  |_)  | |  | |  |__   |   \\|  | `---|  |----`|  |  |  | `---|  |----`\n");
-        printf("\t\t\t\t\t  /  /_\\  \\      |   _  <  |  | |   __|  |  . `  |     |  |     |  |  |  |     |  |     \n");
-        printf("\t\t\t\t\t /  _____  \\     |  |_)  | |  | |  |____ |  |\\   |     |  |     |  `--'  |     |  |     \n");
-        printf("\t\t\t\t\t/__/     \\__\\    |______/  |__| |_______||__| \\__|     |__|      \\______/      |__|     \n");
-        printf("\t\t\t\t\t\t\tNous esp%cront te revoir tr%cs vite pour de nouvelles aventures! \n",130,138);
+        printf("\t\t\t     ___         .______    __   _______ .__   __. .___________.  ______   .___________.\n");
+        printf("\t\t\t    /   \\        |   _  \\  |  | |   ____||  \\ |  | |           | /  __  \\  |           |\n");
+        printf("\t\t\t   /  ^  \\       |  |_)  | |  | |  |__   |   \\|  | `---|  |----`|  |  |  | `---|  |----`\n");
+        printf("\t\t\t  /  /_\\  \\      |   _  <  |  | |   __|  |  . `  |     |  |     |  |  |  |     |  |     \n");
+        printf("\t\t\t /  _____  \\     |  |_)  | |  | |  |____ |  |\\   |     |  |     |  `--'  |     |  |     \n");
+        printf("\t\t\t/__/     \\__\\    |______/  |__| |_______||__| \\__|     |__|      \\______/      |__|     \n");
+        printf("\t                                                             \n");
+        printf("\t\t\t\tNous esp%cront te revoir tr%cs vite pour de nouvelles aventures! \n",130,138);
         color(15,0);
         system("pause");
         break;
@@ -352,6 +353,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 50;
     }else if(characterXp > lvl_1 && characterXp < lvl_2){
         int lvl = lvl_2 - characterXp;
         printf("Vous %ctes niveau ",136);
@@ -363,6 +365,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 150;
     }else if(characterXp > lvl_2 && characterXp < lvl_3){
         int lvl = lvl_3 - characterXp;
         printf("Vous %ctes niveau ",136);
@@ -374,6 +377,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 275;
     }else if(characterXp > lvl_3 && characterXp < lvl_4){
         int lvl = lvl_4 - characterXp;
         printf("Vous %ctes niveau ",136);
@@ -385,6 +389,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 400;
     }else if(characterXp > lvl_4 && characterXp < lvl_5){
         int lvl = lvl_5 - characterXp;
         printf("Vous %ctes niveau ",136);
@@ -396,6 +401,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 750;
     }else{
         color(15,4);
         printf("Error - lvl\n");
@@ -417,7 +423,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
     color(15,0);
     printf("A ce lvl, vous ne pouvez avoir que ");
     color(4,0);
-    printf("[%d ",50);
+    printf("[%d ",character[10]);
     color(2,0);
     printf("HP ");
     color(4,0);
@@ -711,6 +717,7 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
         if(random > 0 && random < 3){
             // Tombe sur un mob
             fight(boss,character);
+<<<<<<< HEAD
             printf("Tu croises un mob, fui bg\n");
         }else if(random > 5 && random < 9){ // Tombe sur une potion
             int randompotion = rand()%2+1;
@@ -741,6 +748,14 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             }
 
 
+=======
+        }else if(random > 5 && random < 9){
+            // Tombe sur une potion
+            printf("Tu croises une potion, gg %c toi\n",133);
+        }else if(random > 8 && random < 12){
+            // Tombe sur une �p�e
+            printf("Tu croises une epee, gg %c toi\n",133);
+>>>>>>> 5e5074b712ff8acfcda3fbd511de1bbdd9942aa6
         }else{
             random = rand()%3+1;
             if (random==1){
@@ -774,6 +789,7 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 system("pause");
             }
         }else if(random > 8 && random < 12){
+<<<<<<< HEAD
             // Tombe sur une �p�e
             int randomEpee = rand()%3+1;
                 if (randomEpee == 1){
@@ -788,6 +804,11 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 printf("Tu tr%cbuche sur quelque chose, tu regarde par terre. C'est une %cp%ce qui est enfouis dans la terre. Tu met toute ta force pour la retirer d'ici. Elle ressemble %ctrangement %c l'%cp%ce d'Excalibur\n",130,130,130,130,133,130,130);
                 system("pause");
             }
+=======
+            // Tombe sur une epee
+            printf("Tu croises une epee, gg %c toi\n",133);
+            system("pause");
+>>>>>>> 5e5074b712ff8acfcda3fbd511de1bbdd9942aa6
         }
         else{//Différznts choix
             random = rand()%5+1;
@@ -812,8 +833,5 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 system("pause");
             }
         }
-
-
-
     }
 }
