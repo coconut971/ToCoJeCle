@@ -31,7 +31,10 @@
 
 1582725347 D
 
-1583328196 source:c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game-init.c
+1583854223 source:c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game-init.c
+	"misc.h"
+	"game.h"
+	"game-init.h"
 
 1583327578 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle_\source\game-init.c
 
@@ -52,7 +55,7 @@
 
 1583328196 c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game-init.h
 
-1583333613 source:c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game.c
+1583854223 source:c:\users\clément\onedrive\bureau\git rpg\tocojecle\source\game.c
 	"misc.h"
 	"game.h"
 	"game-init.h"

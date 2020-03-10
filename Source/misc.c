@@ -717,7 +717,7 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
         if(random > 0 && random < 3){
             // Tombe sur un mob
             fight(boss,character);
-<<<<<<< HEAD
+
             printf("Tu croises un mob, fui bg\n");
         }else if(random > 5 && random < 9){ // Tombe sur une potion
             int randompotion = rand()%2+1;
@@ -748,14 +748,14 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             }
 
 
-=======
+
         }else if(random > 5 && random < 9){
             // Tombe sur une potion
             printf("Tu croises une potion, gg %c toi\n",133);
         }else if(random > 8 && random < 12){
             // Tombe sur une �p�e
             printf("Tu croises une epee, gg %c toi\n",133);
->>>>>>> 5e5074b712ff8acfcda3fbd511de1bbdd9942aa6
+
         }else{
             random = rand()%3+1;
             if (random==1){
@@ -789,7 +789,7 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 system("pause");
             }
         }else if(random > 8 && random < 12){
-<<<<<<< HEAD
+
             // Tombe sur une �p�e
             int randomEpee = rand()%3+1;
                 if (randomEpee == 1){
@@ -804,11 +804,11 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 printf("Tu tr%cbuche sur quelque chose, tu regarde par terre. C'est une %cp%ce qui est enfouis dans la terre. Tu met toute ta force pour la retirer d'ici. Elle ressemble %ctrangement %c l'%cp%ce d'Excalibur\n",130,130,130,130,133,130,130);
                 system("pause");
             }
-=======
+
             // Tombe sur une epee
             printf("Tu croises une epee, gg %c toi\n",133);
             system("pause");
->>>>>>> 5e5074b712ff8acfcda3fbd511de1bbdd9942aa6
+
         }
         else{//Différznts choix
             random = rand()%5+1;
