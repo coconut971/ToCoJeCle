@@ -716,9 +716,11 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             int randompotion = rand()%2+1;
             if (randompotion == 1){
                 printf("Au d%ctour d'un ruisseau tu croise un petit coffre. Tu l'ouvres et tu trouves une potion.La chance est avec toi\n",130);
+                system("pause");
             }
             else if (randompotion == 2){
                 printf("Tu croise un marchand qui te donne gentillement une potion. Tu as un peux de chance dans cette malchance.\n");
+                system("pause");
             }
 
 
@@ -727,12 +729,15 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             int randomEpee = rand()%3+1;
                 if (randomEpee == 1){
                 printf("Tu vois quelque chose qui d%cpasse d'un rocher, tu t'approche c'est une %cpee. La chance te sourit ! \n",130,130);
+                system("pause");
                             }
                 else if (randomEpee == 2){
                 printf("Tu rentre dans une maison et tu trouve au dessus de la chemin%ce une %cp%ce de guerre. La chance !\n",130,130,130);
+                system("pause");
             }
                 else if (randomEpee == 3){
                 printf("Tu tr%cbuche sur quelque chose, tu regarde par terre. C'est une %cp%ce qui est enfouis dans la terre. Tu met toute ta force pour la retirer d'ici. Elle ressemble %ctrangement %c l'%cp%ce d'Excalibur\n",130,130,130,130,133,130,130);
+                system("pause");
             }
 
 
@@ -762,21 +767,26 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             int randompotion = rand()%2+1;
             if (randompotion == 1){
                 printf("Au d%ctour d'un ruisseau tu croise un petit coffre. Tu l'ouvres et tu trouves une potion.La chance est avec toi\n",130);
+                system("pause");
             }
             else if (randompotion == 2){
                 printf("Tu croise un marchand qui te donne gentillement une potion. Tu as un peux de chance dans cette malchance.\n");
+                system("pause");
             }
         }else if(random > 8 && random < 12){
             // Tombe sur une �p�e
             int randomEpee = rand()%3+1;
                 if (randomEpee == 1){
                 printf("Tu vois quelque chose qui d%cpasse d'un rocher, tu t'approche c'est une %cpee. La chance te sourit ! \n",130,130);
+                system("pause");
                             }
                 else if (randomEpee == 2){
                 printf("Tu rentre dans une maison et tu trouve au dessus de la chemin%ce une %cp%ce de guerre. La chance !\n",130,130,130);
+                system("pause");
             }
                 else if (randomEpee == 3){
                 printf("Tu tr%cbuche sur quelque chose, tu regarde par terre. C'est une %cp%ce qui est enfouis dans la terre. Tu met toute ta force pour la retirer d'ici. Elle ressemble %ctrangement %c l'%cp%ce d'Excalibur\n",130,130,130,130,133,130,130);
+                system("pause");
             }
         }
         else{//Différznts choix
