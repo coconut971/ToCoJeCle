@@ -2,3 +2,4 @@ bin/*
 obj/*
 save.txt
 TLD.txt
+*.o
