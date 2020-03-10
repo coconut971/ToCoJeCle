@@ -147,3 +147,27 @@
 	"game-init.h"
 	<windows.h>
 
+1583871395 source:c:\users\user\documents\jeremy\projet2\tocojecle\source\game-init.c
+	"misc.h"
+	"game.h"
+	"game-init.h"
+
+1583871395 c:\users\user\documents\jeremy\projet2\tocojecle\source\misc.h
+
+1583871395 c:\users\user\documents\jeremy\projet2\tocojecle\source\game.h
+
+1583871395 c:\users\user\documents\jeremy\projet2\tocojecle\source\game-init.h
+
+1583871395 source:c:\users\user\documents\jeremy\projet2\tocojecle\source\game.c
+	"misc.h"
+	"game.h"
+	"game-init.h"
+
+1583871395 source:c:\users\user\documents\jeremy\projet2\tocojecle\source\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"game.h"
+	"game-init.h"
+	"misc.h"
+

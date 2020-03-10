@@ -407,6 +407,8 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("Error - lvl\n");
         color(15,0);
     }
+    character[2] = character[10];           //regen hp max apres chaque combat
+
     printf("Vous avez ");
     color(4,0);
     printf("%d ",character[2]);
@@ -706,6 +708,8 @@ void fight(int *mob,int *character){
             character[1] = character[1]+8;
             i = 0;
             printf("Vous avez gagne le combat !\n");
+            printf("Vos PDV sont regenere \n");
+            character[2] = character[10];
         }
         system("pause");
     }
