@@ -43,23 +43,9 @@ void drake(){   // Comme son nom l'indique c'est l'ascii du dragon
     printf("\t\t\t\t\t\n");
     printf("\t\t\t\t\t\n");
     color(15,0);
+    system("pause");
 }
 void dragoeuf(){ //ascii du dragoeuf
-    color(4,0);
-    printf("\t\t\t\t\t         __        _\n");
-    printf("\t\t\t\t\t       _/  \\    _(\\(o\n");
-    printf("\t\t\t\t\t      /     \\  /  _  ^^^o\n");
-    printf("\t\t\t\t\t     /   !   \\/  ! '!!!v'\n");
-    printf("\t\t\t\t\t    !  !  \\ _' ( \\____\n");
-    printf("\t\t\t\t\t    ! . \\ _!\\   \\===^\\)\n");
-    printf("\t\t\t\t\t     \\ \\_!  / __!\n");
-    printf("\t\t\t\t\t      \\!   /    \\\n");
-    printf("\t\t\t\t\t(\\_      _/   _\\ )\n");
-    printf("\t\t\t\t\t \\ ^^--^^ __-^ /(__\n");
-    printf("\t\t\t\t\t  ^^----^^    \"^--v'\n\n");
-    color(15,0);
-}
-void dragnil(){ //Ascii du dragnil
     color(4,0);
     printf("\t\t\t\t\tO=- .-  -. -=O\n");
     printf("\t\t\t\t\tH  /(    )\\  H\n");
@@ -69,8 +55,9 @@ void dragnil(){ //Ascii du dragnil
     printf("\t\t\t\t\tH     )/     H\n");
     printf("\t\t\t\t\tO=-  ('    -=O\n\n");
     color(15,0);
+    system("pause");
 }
-void dragoune(){//Ascii du dragoune
+void dragnil(){ //Ascii du dragnil
     color(4,0);
     printf("\t\t\t\t\t     (\\               /)\n");
     printf("\t\t\t\t\t    __)\\             /(__\n");
@@ -88,8 +75,23 @@ void dragoune(){//Ascii du dragoune
     printf("\t\t\t\t\t    '>_`  \\`-._.-'/  '_<`\n");
     printf("\t\t\t\t\t    ' >_,-'       `-._<`\n\n");
     color(15,0);
-
-
+    system("pause");
+}
+void dragoune(){//Ascii du dragoune
+    color(4,0);
+    printf("\t\t\t\t\t         __        _\n");
+    printf("\t\t\t\t\t       _/  \\    _(\\(o\n");
+    printf("\t\t\t\t\t      /     \\  /  _  ^^^o\n");
+    printf("\t\t\t\t\t     /   !   \\/  ! '!!!v'\n");
+    printf("\t\t\t\t\t    !  !  \\ _' ( \\____\n");
+    printf("\t\t\t\t\t    ! . \\ _!\\   \\===^\\)\n");
+    printf("\t\t\t\t\t     \\ \\_!  / __!\n");
+    printf("\t\t\t\t\t      \\!   /    \\\n");
+    printf("\t\t\t\t\t(\\_      _/   _\\ )\n");
+    printf("\t\t\t\t\t \\ ^^--^^ __-^ /(__\n");
+    printf("\t\t\t\t\t  ^^----^^    \"^--v'\n\n");
+    color(15,0);
+    system("pause");
 }
 
 void loadingScreen(){   // Comme son nom l'indique c'est un loading screen (purement estetique, �a sert � tchipet)
@@ -565,15 +567,15 @@ int atkPlayer(int *character){
     int lvl_4 = 265;
     int lvl_5 = 500;
     if(character[1] >= 0 && character[1] < lvl_1){
-        return 15;
+        return 22;
     }else if(character[1] > lvl_1 && character[1] < lvl_2){
-        return 45;
+        return 85;
     }else if(character[1] > lvl_2 && character[1] < lvl_3){
-        return 75;
+        return 175;
     }else if(character[1] > lvl_3 && character[1] < lvl_4){
-        return 115;
+        return 215;
     }else if(character[1] > lvl_4 && character[1] < lvl_5){
-        return 243;
+        return 342;
     }else{
         color(15,4);
         printf("Error - var lvl in function atkPlayer()\n");
@@ -597,14 +599,13 @@ void fight(int *mob,int *character){
             color(15,0);
             printf("sauvage apparait !\n\n");
             if(mob[0] == "Crocabulia"){
-                void drake();
-            }else if(mob[0] == "dragoeuf"){
-                void dragoeuf();
-            }else if(mob[0] == "dragnil"){
-                void dragnil();
-            }else if(mob[0] == "dragoune"){
-                void dragoune();
-
+                drake();
+            }else if(mob[0] == "Dragoeuf"){
+                dragoeuf();
+            }else if(mob[0] == "Dragnil"){
+                dragnil();
+            }else if(mob[0] == "Dragoune"){
+                dragoune();
             }
             j++;
         }
