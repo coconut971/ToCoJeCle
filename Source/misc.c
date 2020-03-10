@@ -680,9 +680,21 @@ void fight(int *mob,int *character){
                     printf("Votre potion est vide !\n");
                     continue;
                 }else{
-                    // character[2] = character[2]+character[9];
                     printf("POPO DE VIE !\n");
-                    character[2] = 50;
+                    int lostPdv = charater[10] - character[2];
+                    if(character[9] == lostPdv){
+                        character[2] = character[10];
+                        printf("Vous regagnez, %d HP.\n",character[9]);
+                    }else if(character[9] < lostPdv){
+                        character[2] = character[2]+character[9];
+                        character[9] = 0;printf("Vous regagnez, %d HP.\n",character[9]);
+                        printf("Vous regagnez, %d HP.\n",character[9]);
+                    }else if(character[9] > lostPdv){
+                        character[9] = character[9]-lostPdv;
+                        character[2] = character[10];
+                        printf("Vous regagnez, %d HP.\n",character[9]);
+                    }
+
                 }
                 break;
             case 3:

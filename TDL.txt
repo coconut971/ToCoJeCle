@@ -1,12 +1,25 @@
 fonction à coder :
 
-	- Calcule HP max selon le lvl.
-	- Fonction regen hp si augmenter lvl.
+	- Calcule HP max selon le lvl (fait par tom)
+	- Fonction regen hp si augmenter lvl. (fait par jeremy)
 	- Fonction gagner xp selon la zone.
-	- Fonction prendre une potion.
+	- Fonction prendre une potion. (fait par tom: jeremy assiste)
 	- Mettre dans une fonction, toute la première partie de la boucle principal.
-	Fait par clement - Créer tout les textes + les integrers et que ça soit beau.
+	- Créer tout les textes + les integrers et que ça soit beau. (Fait par clement)
 	- Fonction calcule du temps passer depuis la dernière sauvegarde.
 	- Si + de 1min depuis last save, proposer de save avant de quitter.
-	- Remplacer les listes des entiter par des structs
 	- Fix sauvegarde
+
+
+-niveau d'epee (test de fonction pas sur donc je ne lai pas integre)
+int lvlepee = character[3] + randomEpee;
+if character[3] = randomEpee {
+	character[3] ++;
+}elseif character[3] > randomEpee {
+	randomEpee = 0
+}elseif character [3] < randomEpee {
+	randomEpee = 0
+
+printf("votre epee est de niveau %d \n,character[3]")
+
+	
