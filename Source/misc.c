@@ -712,7 +712,6 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
         if(random > 0 && random < 3){
             // Tombe sur un mob
             fight(boss,character);
-            printf("Tu croises un mob, fui bg\n");
         }else if(random > 5 && random < 9){
             // Tombe sur une potion
             printf("Tu croises une potion, gg %c toi\n",133);
@@ -746,7 +745,7 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             printf("Tu croises une potion, gg %c toi\n",133);
             system("pause");
         }else if(random > 8 && random < 12){
-            // Tombe sur une �p�e
+            // Tombe sur une epee
             printf("Tu croises une epee, gg %c toi\n",133);
             system("pause");
         }
