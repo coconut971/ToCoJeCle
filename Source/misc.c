@@ -353,6 +353,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 50;
     }else if(characterXp > lvl_1 && characterXp < lvl_2){
         int lvl = lvl_2 - characterXp;
         printf("Vous %ctes niveau ",136);
@@ -364,6 +365,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 150;
     }else if(characterXp > lvl_2 && characterXp < lvl_3){
         int lvl = lvl_3 - characterXp;
         printf("Vous %ctes niveau ",136);
@@ -375,6 +377,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 275;
     }else if(characterXp > lvl_3 && characterXp < lvl_4){
         int lvl = lvl_4 - characterXp;
         printf("Vous %ctes niveau ",136);
@@ -386,6 +389,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 400;
     }else if(characterXp > lvl_4 && characterXp < lvl_5){
         int lvl = lvl_5 - characterXp;
         printf("Vous %ctes niveau ",136);
@@ -397,6 +401,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         printf("%d",lvl);
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
+        character[10] = 750;
     }else{
         color(15,4);
         printf("Error - lvl\n");
@@ -418,7 +423,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
     color(15,0);
     printf("A ce lvl, vous ne pouvez avoir que ");
     color(4,0);
-    printf("[%d ",50);
+    printf("[%d ",character[10]);
     color(2,0);
     printf("HP ");
     color(4,0);
@@ -772,8 +777,5 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 system("pause");
             }
         }
-
-
-
     }
 }

@@ -39,6 +39,7 @@ void createCharacter(int *character){
     character[7] = 0;          // Progression dans l'histoire (pour les indices sous la map)
     character[8] = 0;          // Map du jeu
     character[9] = 5;          // Point d'hp de la potion
+    character[10] = 50;        // PHP MAX selon lvl
     color(14,0);
     printf("\n\nCr%cation de votre personnage",130);
     /*
