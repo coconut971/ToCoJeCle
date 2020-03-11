@@ -117,7 +117,9 @@
 	"game-init.h"
 	<windows.h>
 
-1583915650 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle\source\game-init.c
+1583919219 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle\source\game-init.c
+	<stdio.h>
+	<stdlib.h>
 	"misc.h"
 	"game.h"
 	"game-init.h"
@@ -128,7 +130,7 @@
 
 1583914795 c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle\source\game-init.h
 
-1583914795 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle\source\game.c
+1583918619 source:c:\users\h3ll0w0rld\documents\dev\c\rpg-c\tocojecle\source\game.c
 	"misc.h"
 	"game.h"
 	"game-init.h"

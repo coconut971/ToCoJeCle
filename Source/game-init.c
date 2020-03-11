@@ -2,6 +2,8 @@
 // Created by h3ll0w0rld (Tom) on 21/02/2020.
 //
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "misc.h"
 #include "game.h"
 #include "game-init.h"
@@ -11,6 +13,7 @@ void fullScreen(){  // Comme son nom l'indique c'est la fonction qui previent le
     color(14,5);
     printf("\nVeuillez mettre votre console en pleine ecran pour profiter pleinement du jeu.\n\n");
     color(15,0);
+    fprintf(stdout, "%lu\n", (unsigned long)time(NULL));
     system("pause");
     system("cls");
 
@@ -75,19 +78,17 @@ void createMap(int (*map)[20]){
     }
 }
 
-/*
-
 void saveGame(int *character, int *boss){    // Sauvegarder la game.
   FILE *fpointer;
-  fpointer = fopen("../Save/save.txt", "w");
-  fprintf(fpointer, "%s\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",character[0],character[1],character[2],character[3],character[4],character[5],character[6],character[7],character[8],character[9],boss[2]);
+  fpointer = fopen("../save.txt", "w");
+  fprintf(fpointer, "%s\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",character[0],character[1],character[2],character[3],character[4],character[5],character[6],character[7],character[8],character[9],character[10]);
   fclose(fpointer);
 }
 
 
 void loadGame(int *character,int *boss){    // Charger la sauvegarde.
   FILE *fpointer;
-  fpointer = fopen("../Save/save.txt", "r");
+  fpointer = fopen("../save.txt", "r");
   char singleLine[11][150];
   int counter = 0;
   while (!feof(fpointer))
@@ -107,6 +108,6 @@ void loadGame(int *character,int *boss){    // Charger la sauvegarde.
   character[7] = atoi(singleLine[7]);
   character[8] = atoi(singleLine[8]);
   character[9] = atoi(singleLine[9]);
-  boss[2] = atoi(singleLine[10]);
+  character[10] = atoi(singleLine[10]);
+  //boss[2] = atoi(singleLine[11]);
 }
-*/

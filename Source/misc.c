@@ -404,6 +404,13 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
         color(15,0);
         printf(" xp %c gagner avant de passer au prochain niveau\n",133);
         character[10] = 750;
+    }else if(characterXp >= lvl_5){
+        int lvl = lvl_5 - characterXp;
+        printf("Vous %ctes niveau ",136);
+        color(2,0);
+        printf("MAX\n");
+        color(15,0);
+        character[10] = 999;
     }else{
         color(15,4);
         printf("Error - lvl\n");
@@ -589,6 +596,8 @@ int atkPlayer(int *character){
         return 215+dpsEpee;
     }else if(character[1] > lvl_4 && character[1] < lvl_5){
         return 342+dpsEpee;
+    }else if(character[1] >= lvl_5){
+        return 425+dpsEpee;
     }else{
         color(15,4);
         printf("Error - var lvl in function atkPlayer()\n");
@@ -685,6 +694,15 @@ void fight(int *mob,int *character,int zonePlayer){
                         printf("-%d\n",atk);
                         color(15,0);
                     }
+                }else if(character[3] > 3){
+                    mob[1] = mob[1]-atk;
+                    color(2,0);
+                    printf("Vous ");
+                    color(15,0);
+                    printf("attaquez !\n");
+                    color(4,0);
+                    printf("-%d\n",atk);
+                    color(15,0);
                 }
                 break;
             case 2:
@@ -752,6 +770,11 @@ void fight(int *mob,int *character,int zonePlayer){
             printf("Vos PDV sont regenere \n");
             character[2] = character[10];
         }
+        if(character[2] <= 0){
+            printf("Combat perdu !\n");
+            system("pause");
+            break;
+        }
         system("pause");
     }
 }
@@ -771,10 +794,8 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
     }
     if(zonePlayer == 4){
         if(random > 0 && random < 3){
-            // Tombe sur un mob
+            // Tombe sur le boss
             fight(boss,character,zonePlayer);
-
-            printf("Tu croises un mob, fui bg\n");
         }else if(random > 5 && random < 9){ // Tombe sur une potion
             int randompotion = rand()%2+1;
             if (randompotion == 1){
@@ -785,9 +806,6 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 printf("Tu croise un marchand qui te donne gentillement une potion. Tu as un peux de chance dans cette malchance.\n");
                 system("pause");
             }
-
-
-
         }else if(random > 8 && random < 12){ // Tombe sur une epee
             int randomEpee = rand()%3+1;
             if (randomEpee == 1){

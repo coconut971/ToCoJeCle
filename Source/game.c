@@ -24,7 +24,7 @@ void startGame(){
             ingameText(1,character);
             gameLoop(character, map, boss);
         }else if(choice == 2){  // Option charger la dernière sauvegarde
-            // loadGame(character, boss);
+            loadGame(character, boss);
             ingameText(4,character);
             gameLoop(character, map, boss);
         }else if(choice == 3){  // Option a propos
@@ -50,11 +50,9 @@ void gameLoop(int *character, int *map, int *boss){
             printMap(map, character[5], character[6]);
             characterNextLevel(character);
             printf("\n\n");
-            ingameText(2,character);
-            // On affiche un menu de choix et on recupere l'input player pour effectuer son choix.
-            int colide;
-            // int choice = makeChoice(6);
+            ingameText(2,character);// On affiche un menu de choix et on recupere l'input player pour effectuer son choix.
             int choice = makeChoiceZQSD();
+            int colide;
             switch(choice){
                 case 1:
                     colide = moove(1,character);
@@ -105,7 +103,7 @@ void gameLoop(int *character, int *map, int *boss){
                     }
                     break;
                 case 5:
-                    // saveGame(character,boss);
+                    saveGame(character,boss);
                     break;
                 case 6:
                     loop = 0;
