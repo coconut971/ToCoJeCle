@@ -596,7 +596,7 @@ int atkPlayer(int *character){
     }
 }
 
-void fight(int *mob,int *character){
+void fight(int *mob,int *character,int zonePlayer){
     int i = 1;
     int j = 0;
     int random;
@@ -732,7 +732,21 @@ void fight(int *mob,int *character){
             color(15,0);
             character[2] = character[2]-mob[2];
         }else{
-            character[1] = character[1]+8;
+            int xp;
+            if(zonePlayer == 1){
+                xp = 12;
+                character[1] = character[1]+xp;
+            }else if(zonePlayer == 2){
+                xp = 31;
+                character[1] = character[1]+xp;
+            }else if(zonePlayer == 3){
+                xp = 69;
+                character[1] = character[1]+xp;
+            }else if(zonePlayer == 4){
+                xp = 132;
+                character[1] = character[1]+xp;
+            }
+            printf("Vous gagnez %d xp.\n",xp);
             i = 0;
             printf("Vous avez gagne le combat !\n");
             printf("Vos PDV sont regenere \n");
@@ -758,7 +772,7 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
     if(zonePlayer == 4){
         if(random > 0 && random < 3){
             // Tombe sur un mob
-            fight(boss,character);
+            fight(boss,character,zonePlayer);
 
             printf("Tu croises un mob, fui bg\n");
         }else if(random > 5 && random < 9){ // Tombe sur une potion
@@ -803,7 +817,7 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
     }else{
         if(random > 0 && random < 6){
             // Tombe sur un mob
-            fight(mob,character);
+            fight(mob,character,zonePlayer);
         }else if(random > 5 && random < 9){ // Tombe sur une potion
             int randompotion = rand()%2+1;
             if (randompotion == 1){

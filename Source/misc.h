@@ -19,7 +19,7 @@ int moove(int direction, int *character);
 void printMap(int (*map)[20], int x, int y);
 int whereIsPlayer(int *character);
 int atkPlayer(int *character);
-void fight(int *mob,int *character);
+void fight(int *mob,int *character,int zonePlayer);
 void adventure(int *character, int mob, int *boss);
 int epeeTrouveSelonZone(int *character, int zonePlayer, int epeetrouve);
 
