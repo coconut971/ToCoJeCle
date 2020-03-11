@@ -36,7 +36,7 @@ Les Tâches
     * Mise en place du Lore Ingame
 
 4. Jeremy GRIFFITH / Junior developper
-    * se charge de la mise en place de la configuration et du développement
+    * se charge de la mise en place du developpement et de certaines fonctions 
 
 
 La Progression
@@ -51,6 +51,8 @@ Le projet est l'idée d'un exercice en langage C à présenter en cours le 11/02
 ## Changelog 
 
 Pour le changeLog il n'est pas encore disponible 
+
+IL Y A EU 3 VERSIONS 
 
 
 
