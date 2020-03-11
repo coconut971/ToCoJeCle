@@ -13,7 +13,6 @@ void fullScreen(){  // Comme son nom l'indique c'est la fonction qui previent le
     color(14,5);
     printf("\nVeuillez mettre votre console en pleine ecran pour profiter pleinement du jeu.\n\n");
     color(15,0);
-    fprintf(stdout, "%lu\n", (unsigned long)time(NULL));
     system("pause");
     system("cls");
 

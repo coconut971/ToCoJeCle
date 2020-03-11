@@ -5,6 +5,7 @@
 #include "misc.h"
 #include "game.h"
 #include "game-init.h"
+#include <time.h>
 
 void startGame(){
     int character[11];  // Liste personnage
@@ -41,6 +42,10 @@ void gameLoop(int *character, int *map, int *boss){
     int loop = 1;       // Var de la boucle, on va la set à 0 quand on voudra sortir de la boucle
     int mob[3];         // Liste du mob
     setMob(1,boss);     // Set les valeurs du boss
+    time_t firstSave;
+    firstSave = time(NULL);
+    time_t secondSave;
+    int neverSave = 0;
 
     while(loop){
         int loop2 = 1;
@@ -103,12 +108,30 @@ void gameLoop(int *character, int *map, int *boss){
                     }
                     break;
                 case 5:
+                    neverSave = 1;
+                    firstSave = time(NULL);
                     saveGame(character);
                     break;
                 case 6:
                     loop = 0;
                     loop2 = 0;
                     result = 2;
+                    if(neverSave == 1){
+                        secondSave = time(NULL);
+                        if((secondSave-firstSave)>=30){
+                            printf("Attention !\nVous avez sauvegarde il y a plus de 30 secondes !\nVoulez vous sauvegarder avant de quitter ?\n1. Oui.\n2. Non.\n");
+                            int saveChoice = makeChoice(2);
+                            if(saveChoice == 1){
+                                saveGame(character);
+                            }
+                        }
+                    }else{
+                        printf("Attention !\nVous n'avez jamais sauvegarde !\nVoulez vous sauvegarder avant de quitter ?\n1. Oui.\n2. Non.\n");
+                            int saveChoice = makeChoice(2);
+                            if(saveChoice == 1){
+                                saveGame(character);
+                            }
+                    }
                     break;
                 default:
                     color(15,4);
