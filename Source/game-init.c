@@ -45,14 +45,12 @@ void createCharacter(int *character){
     character[10] = 50;        // PHP MAX selon lvl
     color(14,0);
     printf("\n\nCr%cation de votre personnage",130);
-    /*
     int i;
     for(i = 0; i < 3;i+=1){
         Sleep(500);
         printf(".");
     }
     Sleep(500);
-    */
     color(15,0);
 }
 
@@ -78,17 +76,17 @@ void createMap(int (*map)[20]){
     }
 }
 
-void saveGame(int *character, int *boss){    // Sauvegarder la game.
+void saveGame(int *character){    // Sauvegarder la game.
   FILE *fpointer;
-  fpointer = fopen("../save.txt", "w");
+  fpointer = fopen("./save.txt", "w");
   fprintf(fpointer, "%s\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",character[0],character[1],character[2],character[3],character[4],character[5],character[6],character[7],character[8],character[9],character[10]);
   fclose(fpointer);
 }
 
 
-void loadGame(int *character,int *boss){    // Charger la sauvegarde.
+void loadGame(int *character){    // Charger la sauvegarde.
   FILE *fpointer;
-  fpointer = fopen("../save.txt", "r");
+  fpointer = fopen("./save.txt", "r");
   char singleLine[11][150];
   int counter = 0;
   while (!feof(fpointer))

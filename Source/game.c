@@ -12,7 +12,7 @@ void startGame(){
     int map[20][20];
     createMap(map);
     fullScreen();
-    //loadingScreen();
+    loadingScreen();
     int i;
     do{
         i= 0;
@@ -24,7 +24,7 @@ void startGame(){
             ingameText(1,character);
             gameLoop(character, map, boss);
         }else if(choice == 2){  // Option charger la dernière sauvegarde
-            loadGame(character, boss);
+            loadGame(character);
             ingameText(4,character);
             gameLoop(character, map, boss);
         }else if(choice == 3){  // Option a propos
@@ -103,7 +103,7 @@ void gameLoop(int *character, int *map, int *boss){
                     }
                     break;
                 case 5:
-                    saveGame(character,boss);
+                    saveGame(character);
                     break;
                 case 6:
                     loop = 0;

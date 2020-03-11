@@ -9,7 +9,7 @@ void fullScreen();
 void startMenu();
 void createCharacter(int *personnage);
 void createMap(int (*map)[20]);
-void saveGame(int *character, int *boss);
-void loadGame(int *character,int *boss);
+void saveGame(int *character);
+void loadGame(int *character);
 
 #endif // GAME-INIT_H_INCLUDED
