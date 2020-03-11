@@ -433,6 +433,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
     color(4,0);
     printf("MAX]\n");
     color(15,0);
+    printf("Votre epee est level %d.\n",character[3]);
 }
 
 void setMob(int whatMob, int *mob){
@@ -731,6 +732,7 @@ void fight(int *mob,int *character){
 
 void adventure(int *character, int mob, int *boss){ // L� on va foutre toute les aleatoire d'apparition mob ou objet selon la position sur la map
     srand(time(NULL));
+    int epeetrouve;
     int random = rand()%20+1;
     int zonePlayer = whereIsPlayer(character);
 
@@ -762,39 +764,30 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
 
         }else if(random > 8 && random < 12){ // Tombe sur une epee
             int randomEpee = rand()%3+1;
-                if (randomEpee == 1){
+            if (randomEpee == 1){
                 printf("Tu vois quelque chose qui d%cpasse d'un rocher, tu t'approche c'est une %cpee. La chance te sourit ! \n",130,130);
-                system("pause");
-                            }
-                else if (randomEpee == 2){
+                epeeTrouveSelonZone(character, zonePlayer, epeetrouve);
+            }else if (randomEpee == 2){
                 printf("Tu rentre dans une maison et tu trouve au dessus de la chemin%ce une %cp%ce de guerre. La chance !\n",130,130,130);
-                system("pause");
-            }
-                else if (randomEpee == 3){
+                epeeTrouveSelonZone(character, zonePlayer, epeetrouve);
+            }else if (randomEpee == 3){
                 printf("Tu tr%cbuche sur quelque chose, tu regarde par terre. C'est une %cp%ce qui est enfouis dans la terre. Tu met toute ta force pour la retirer d'ici. Elle ressemble %ctrangement %c l'%cp%ce d'Excalibur\n",130,130,130,130,133,130,130);
-                system("pause");
+                epeeTrouveSelonZone(character, zonePlayer, epeetrouve);
             }
-
-
-
-
-
+            system("pause");
         }else{
             random = rand()%3+1;
             if (random==1){
                 printf("Il commence %c pleuvoir vous allez vous abriter sous un arbre.\n",133);
-                system("pause");
             }
             else if (random==2) {
                 printf("Vous marchez dans la for%ct, il fait beau, le soleil tape.\n",136);
-                system("pause");
-
             }
             else if (random==3){
                 printf("Continue de chercher le boss mdr\n");
             }
-
-            }
+            system("pause");
+        }
 
 
     }else{
@@ -813,23 +806,21 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             }
         }else if(random > 8 && random < 12){
 
-            // Tombe sur une �p�e
+            // Tombe sur une epee
             int randomEpee = rand()%3+1;
                 if (randomEpee == 1){
-                printf("Tu vois quelque chose qui d%cpasse d'un rocher, tu t'approche c'est une %cpee. La chance te sourit ! \n",130,130);
-                system("pause");
-                            }
+                    printf("Tu vois quelque chose qui d%cpasse d'un rocher, tu t'approche c'est une %cpee. La chance te sourit ! \n",130,130);
+                    epeeTrouveSelonZone(character, zonePlayer, epeetrouve);
+                }
                 else if (randomEpee == 2){
-                printf("Tu rentre dans une maison et tu trouve au dessus de la chemin%ce une %cp%ce de guerre. La chance !\n",130,130,130);
-                system("pause");
-            }
+                        printf("Tu rentre dans une maison et tu trouve au dessus de la chemin%ce une %cp%ce de guerre. La chance !\n",130,130,130);
+                        epeeTrouveSelonZone(character, zonePlayer, epeetrouve);
+                }
                 else if (randomEpee == 3){
-                printf("Tu tr%cbuche sur quelque chose, tu regarde par terre. C'est une %cp%ce qui est enfouis dans la terre. Tu met toute ta force pour la retirer d'ici. Elle ressemble %ctrangement %c l'%cp%ce d'Excalibur\n",130,130,130,130,133,130,130);
+                    printf("Tu tr%cbuche sur quelque chose, tu regarde par terre. C'est une %cp%ce qui est enfouis dans la terre. Tu met toute ta force pour la retirer d'ici. Elle ressemble %ctrangement %c l'%cp%ce d'Excalibur\n",130,130,130,130,133,130,130);
+                    epeeTrouveSelonZone(character, zonePlayer, epeetrouve);
+                }
                 system("pause");
-            }
-
-
-
         }
         else{//Différznts choix
             random = rand()%5+1;
@@ -853,6 +844,62 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 printf("Vous marchez dans la for%ct, il fait beau, le soleil tape.\n\n",136);
                 system("pause");
             }
+        }
+    }
+}
+
+int epeeTrouveSelonZone(int *character, int zonePlayer, int epeetrouve){
+    if(zonePlayer == 1){
+        epeetrouve = 1;
+        printf("C'est une epee de level %d !\n\n",epeetrouve);
+        printf("Votre epee actuelle est level %d\n",character[3]);
+        if(epeetrouve == character[3]){
+            printf("Voulez vous fusionnez les deux epee ?\n1. Oui.\n2. Non.\n");
+            int choiceEpee = makeChoice(2);
+            if(choiceEpee == 1){
+                character[3] = character[3]+1;
+            }
+        }else{
+            printf("Vous ne pouvez pas fusionner ces deux epees.\n");
+        }
+    }else if(zonePlayer == 2){
+        epeetrouve = 2;
+        printf("C'est une epee de level %d !\n\n",epeetrouve);
+        printf("Votre epee actuelle est level %d\n",character[3]);
+        if(epeetrouve == character[3]){
+            printf("Voulez vous fusionnez les deux epee ?\n1. Oui.\n2. Non.\n");
+            int choiceEpee = makeChoice(2);
+            if(choiceEpee == 1){
+                character[3] = character[3]+1;
+            }
+        }else{
+            printf("Vous ne pouvez pas fusionner ces deux epees.\n");
+        }
+    }else if(zonePlayer == 3){
+        epeetrouve = 3;
+        printf("C'est une epee de level %d !\n\n",epeetrouve);
+        printf("Votre epee actuelle est level %d\n",character[3]);
+        if(epeetrouve == character[3]){
+            printf("Voulez vous fusionnez les deux epee ?\n1. Oui.\n2. Non.\n");
+            int choiceEpee = makeChoice(2);
+            if(choiceEpee == 1){
+                character[3] = character[3]+1;
+            }
+        }else{
+            printf("Vous ne pouvez pas fusionner ces deux epees.\n");
+        }
+    }else if(zonePlayer == 4){
+        epeetrouve = 4;
+        printf("C'est une epee de level %d !\n\n",epeetrouve);
+        printf("Votre epee actuelle est level %d\n",character[3]);
+        if(epeetrouve == character[3]){
+            printf("Voulez vous fusionnez les deux epee ?\n1. Oui.\n2. Non.\n");
+            int choiceEpee = makeChoice(2);
+            if(choiceEpee == 1){
+                character[3] = character[3]+1;
+            }
+        }else{
+            printf("Vous ne pouvez pas fusionner ces deux epees.\n");
         }
     }
 }
