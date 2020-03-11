@@ -255,7 +255,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         color(6,0);
         printf("COCONUT");
         color(15,0);
-        printf(" => Chef de projet. Il est bon en JS, dommage qu'on fasse du C.\n\n");
+        printf(" => Chef de projet. Il est bon en JS, dommage qu'on fasse du C. Mais a %ct%c d'une aide crucial\n\n");
 
         color(6,0);
         printf("Tom ");
@@ -264,7 +264,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         color(6,0);
         printf("H3ll0w0rld");
         color(15,0);
-        printf(" => D%cveloppeur principal. En gros j'ai tout fait pour le moment, m%cme le cahier des charges.\n\n",130,136);
+        printf(" => D%cveloppeur principal. Il est tres bon en C et heureusement qu'il %ctait la !\n\n",130,130);
 
         color(6,0);
         printf("Jeremy");
@@ -273,7 +273,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         color(6,0);
         printf("Il est pr%csent ",130);
         color(15,0);
-        printf(" => Bah il est pr%csent quoi, c'est un bon soutient mental pour le projet.\n\n",130);
+        printf(" => A fait de gros efforts malgr%c ses difficult%s , c'est un bosseur !!!\n\n",130,130);
 
         color(6,0);
         printf("Clement");
@@ -282,7 +282,7 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         color(6,0);
         printf("Useless-Boy ");
         color(15,0);
-        printf(" => Il s'est occup%c de tout les textes, de l'ASCII, de la musique et de deux trois d%cbuggage.\n\n",130,130);
+        printf(" => Il s'est occup%c de tous les textes, de l'ASCII, de la musique et de deux trois d%cbuggage.\n\n",130,130);
 
         printf("\n\n\n\n");
         system("pause");
