@@ -426,7 +426,7 @@ void characterNextLevel(int *character){   // Comme son nom l'indique c'est la f
 
     printf("Votre potion peut rendre un total de ");
     color(1,0);
-    printf("%d"),character[9];
+    printf("%d",character[9]);
     color(15,0);
     printf(" HP.\n");
     color(4,0);
@@ -798,12 +798,13 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             int randompotion = rand()%2+1;
             if (randompotion == 1){
                 printf("Au d%ctour d'un ruisseau tu croise un petit coffre. Tu l'ouvres et tu trouves une potion.La chance est avec toi\n",130);
-                system("pause");
+                croiserPotion(character, zonePlayer);
             }
             else if (randompotion == 2){
                 printf("Tu croise un marchand qui te donne gentillement une potion. Tu as un peux de chance dans cette malchance.\n");
-                system("pause");
+                croiserPotion(character, zonePlayer);
             }
+            system("pause");
         }else if(random > 8 && random < 12){ // Tombe sur une epee
             int randomEpee = rand()%3+1;
             if (randomEpee == 1){
@@ -834,17 +835,18 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
         if(random > 0 && random < 6){
             // Tombe sur un mob
             fight(mob,character,zonePlayer);
-        }else if(random > 5 && random < 9){ // Tombe sur une potion
+        }else if(random > 5 && random < 12){ // Tombe sur une potion
             int randompotion = rand()%2+1;
             if (randompotion == 1){
                 printf("Au d%ctour d'un ruisseau tu croise un petit coffre. Tu l'ouvres et tu trouves une potion.La chance est avec toi\n",130);
-                system("pause");
+                croiserPotion(character, zonePlayer);
             }
             else if (randompotion == 2){
                 printf("Tu croise un marchand qui te donne gentillement une potion. Tu as un peux de chance dans cette malchance.\n");
-                system("pause");
+                croiserPotion(character, zonePlayer);
             }
-        }else if(random > 8 && random < 12){
+            system("pause");
+        }else if(random > 11 && random < 15){
             // Tombe sur une epee
             int randomEpee = rand()%3+1;
                 if (randomEpee == 1){
@@ -940,5 +942,26 @@ int epeeTrouveSelonZone(int *character, int zonePlayer, int epeetrouve){
         }else{
             printf("Vous ne pouvez pas fusionner ces deux epees.\n");
         }
+    }
+}
+
+void croiserPotion(int *character, int zonePlayer){
+    int popo;
+    if(zonePlayer == 1){
+        popo = 17;
+        printf("Popo rechargeable +%dHP.\n",popo);
+        character[9] = character[9] + popo;
+    }else if(zonePlayer == 2){
+        popo = 35;
+        printf("Popo rechargeable +%dHP.\n",popo);
+        character[9] = character[9] + popo;
+    }else if(zonePlayer == 3){
+        popo = 75;
+        printf("Popo rechargeable +%dHP.\n",popo);
+        character[9] = character[9] + popo;
+    }else if(zonePlayer == 4){
+        popo = 113;
+        printf("Popo rechargeable +%dHP.\n",popo);
+        character[9] = character[9] + popo;
     }
 }
