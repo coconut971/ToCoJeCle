@@ -267,16 +267,16 @@ void ingameText(int whatText, int *character){  // Comme son nom l'indique c'est
         printf(" => D%cveloppeur principal. Il est tres bon en C et heureusement qu'il %ctait la !\n\n",130,130);
 
         color(6,0);
-        printf("Jeremy");
+        printf("Jeremy ");
         color(15,0);
         printf("alias ");
         color(6,0);
         printf("Il est pr%csent ",130);
         color(15,0);
-        printf(" => A fait de gros efforts malgr%c ses difficult%s , c'est un bosseur !!!\n\n",130,130);
+        printf(" => A fait de gros efforts malgr%c ses difficult%cs , c'est un bosseur !!!\n\n",130,130);
 
         color(6,0);
-        printf("Clement");
+        printf("Clement ");
         color(15,0);
         printf("alias ");
         color(6,0);
