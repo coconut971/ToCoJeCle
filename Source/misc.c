@@ -771,8 +771,6 @@ void fight(int *mob,int *character,int zonePlayer){
             character[2] = character[10];
         }
         if(character[2] <= 0){
-            printf("Combat perdu !\n");
-            system("pause");
             break;
         }
         system("pause");
