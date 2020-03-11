@@ -21,5 +21,6 @@ int whereIsPlayer(int *character);
 int atkPlayer(int *character);
 void fight(int *mob,int *character);
 void adventure(int *character, int mob, int *boss);
+int epeeTrouveSelonZone(int *character, int zonePlayer, int epeetrouve);
 
 #endif // MISC_H_INCLUDED

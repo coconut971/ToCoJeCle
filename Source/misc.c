@@ -567,16 +567,28 @@ int atkPlayer(int *character){
     int lvl_3 = 145;
     int lvl_4 = 265;
     int lvl_5 = 500;
+    int dpsEpee;
+    if(character[3] == 1){
+        dpsEpee = 5;
+    }else if(character[3] == 2){
+        dpsEpee = 13;
+    }if(character[3] == 3){
+        dpsEpee = 27;
+    }if(character[3] == 4){
+        dpsEpee = 42;
+    }if(character[3] == 5){
+        dpsEpee = 72;
+    }
     if(character[1] >= 0 && character[1] < lvl_1){
-        return 22;
+        return 22+dpsEpee;
     }else if(character[1] > lvl_1 && character[1] < lvl_2){
-        return 85;
+        return 85+dpsEpee;
     }else if(character[1] > lvl_2 && character[1] < lvl_3){
-        return 175;
+        return 175+dpsEpee;
     }else if(character[1] > lvl_3 && character[1] < lvl_4){
-        return 215;
+        return 215+dpsEpee;
     }else if(character[1] > lvl_4 && character[1] < lvl_5){
-        return 342;
+        return 342+dpsEpee;
     }else{
         color(15,4);
         printf("Error - var lvl in function atkPlayer()\n");
@@ -788,8 +800,6 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
             }
             system("pause");
         }
-
-
     }else{
         if(random > 0 && random < 6){
             // Tombe sur un mob
@@ -805,7 +815,6 @@ void adventure(int *character, int mob, int *boss){ // L� on va foutre toute l
                 system("pause");
             }
         }else if(random > 8 && random < 12){
-
             // Tombe sur une epee
             int randomEpee = rand()%3+1;
                 if (randomEpee == 1){
