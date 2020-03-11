@@ -681,18 +681,19 @@ void fight(int *mob,int *character){
                     continue;
                 }else{
                     printf("POPO DE VIE !\n");
-                    int lostPdv = charater[10] - character[2];
+                    int lostPdv = character[10] - character[2];
                     if(character[9] == lostPdv){
                         character[2] = character[10];
                         printf("Vous regagnez, %d HP.\n",character[9]);
+                        character[9] = 0;
                     }else if(character[9] < lostPdv){
                         character[2] = character[2]+character[9];
-                        character[9] = 0;printf("Vous regagnez, %d HP.\n",character[9]);
                         printf("Vous regagnez, %d HP.\n",character[9]);
+                        character[9] = 0;
                     }else if(character[9] > lostPdv){
                         character[9] = character[9]-lostPdv;
                         character[2] = character[10];
-                        printf("Vous regagnez, %d HP.\n",character[9]);
+                        printf("Vous regagnez, %d HP.\n",lostPdv);
                     }
 
                 }
